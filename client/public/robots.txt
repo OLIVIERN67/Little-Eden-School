@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+
+# Crawl delay for search engines
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://littleeden-kqjayi8u.manus.space/sitemap.xml
