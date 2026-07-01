@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { galleryPaths } from '@/lib/gallery';
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +16,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/manus-storage/EDEN_10.jpg_347607f4.jpeg)',
+          backgroundImage: `url(${galleryPaths.hero})`,
         }}
       >
         {/* Enhanced Gradient Overlay */}

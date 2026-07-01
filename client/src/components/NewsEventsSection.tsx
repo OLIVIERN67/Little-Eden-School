@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { galleryPaths } from '@/lib/gallery';
 
 interface Event {
   date: string;
@@ -20,7 +21,7 @@ export default function NewsEventsSection() {
       description: 'A fun-filled day of sports, games, and friendly competition. Students showcase their athletic talents and teamwork.',
       location: 'School Grounds',
       type: 'event',
-      image: '/manus-storage/EDEN_5.jpg_04c80c41.jpeg',
+      image: galleryPaths.news[0],
     },
     {
       date: '20',
@@ -29,7 +30,7 @@ export default function NewsEventsSection() {
       description: 'Students showcase their talents in music, dance, and art. A celebration of creativity and self-expression.',
       location: 'School Auditorium',
       type: 'event',
-      image: '/manus-storage/EDEN_7.jpg_1e2b216a.jpeg',
+      image: galleryPaths.news[1],
     },
     {
       date: '10',
@@ -38,7 +39,7 @@ export default function NewsEventsSection() {
       description: 'Meet with teachers to discuss your child\'s progress, achievements, and areas for growth.',
       location: 'School Classrooms',
       type: 'event',
-      image: '/manus-storage/EDEN_1.jpg_cf768854.jpeg',
+      image: galleryPaths.news[2],
     },
     {
       date: '05',
@@ -47,7 +48,7 @@ export default function NewsEventsSection() {
       description: 'Young scientists present their exciting projects and experiments. A showcase of innovation and discovery.',
       location: 'School Grounds',
       type: 'event',
-      image: '/manus-storage/EDEN_4.jpg_23b0194f.jpeg',
+      image: galleryPaths.news[3],
     },
   ];
 

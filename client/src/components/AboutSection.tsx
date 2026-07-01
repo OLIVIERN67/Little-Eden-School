@@ -1,3 +1,5 @@
+import { galleryPaths } from '@/lib/gallery';
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-12 md:py-16 lg:py-24 bg-white">
@@ -6,7 +8,7 @@ export default function AboutSection() {
           {/* Image */}
           <div className="order-2 md:order-1">
             <img
-              src="/manus-storage/EDEN.jpg_f87f6cda.jpeg"
+              src={galleryPaths.about}
               alt="Little Eden School Classroom"
               className="rounded-lg shadow-lg w-full h-auto"
             />

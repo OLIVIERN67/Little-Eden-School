@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { galleryPaths } from '@/lib/gallery';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,9 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-2 md:gap-3">
           <img
-            src="/manus-storage/WhatsAppImage2026-06-17at15.51.57_8ce69b37.jpeg"
+            src={galleryPaths.header}
             alt="Little Eden School Logo"
-            className="h-12 w-12 md:h-14 md:w-14"
+            className="h-12 w-12 md:h-14 md:w-14 rounded-full object-contain bg-white p-1 ring-2 ring-[#0056D2]/10"
           />
           <div className="hidden sm:block">
             <h1 className="text-lg md:text-xl font-bold text-[#0056D2]">Little Eden</h1>

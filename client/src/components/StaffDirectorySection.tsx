@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Mail, Phone, Award } from 'lucide-react';
+import { galleryPaths } from '@/lib/gallery';
 
 interface StaffMember {
   name: string;
@@ -20,7 +21,7 @@ export default function StaffDirectorySection() {
       bio: 'Visionary leader with 20+ years in educational excellence and institutional development.',
       email: 'e.rwigema@littleeden.rw',
       phone: '+250 788 123 456',
-      image: '/manus-storage/EDEN_5.jpg_04c80c41.jpeg',
+      image: galleryPaths.staff[0],
     },
     {
       name: 'Mrs. Aimee Mukamusoni',
@@ -29,7 +30,7 @@ export default function StaffDirectorySection() {
       bio: 'Dedicated educator specializing in curriculum development and student achievement.',
       email: 'a.mukamusoni@littleeden.rw',
       phone: '+250 788 234 567',
-      image: '/manus-storage/EDEN.jpg_f87f6cda.jpeg',
+      image: galleryPaths.staff[1],
     },
     {
       name: 'Mr. Patrick Niyigena',
@@ -38,7 +39,7 @@ export default function StaffDirectorySection() {
       bio: 'Passionate about fostering critical thinking and creativity in young learners.',
       email: 'p.niyigena@littleeden.rw',
       phone: '+250 788 345 678',
-      image: '/manus-storage/EDEN_1.jpg_cf768854.jpeg',
+      image: galleryPaths.staff[2],
     },
     {
       name: 'Ms. Claudette Habimana',
@@ -47,7 +48,7 @@ export default function StaffDirectorySection() {
       bio: 'Expert in child development and creating nurturing learning environments.',
       email: 'c.habimana@littleeden.rw',
       phone: '+250 788 456 789',
-      image: '/manus-storage/EDEN_2.jpg_30704005.jpeg',
+      image: galleryPaths.staff[3],
     },
   ];
 
