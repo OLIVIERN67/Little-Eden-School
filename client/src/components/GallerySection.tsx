@@ -2,19 +2,21 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { X } from 'lucide-react';
 import { galleryImages } from '@/lib/gallery';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   return (
     <section id="gallery" className="py-12 md:py-16 lg:py-24 bg-white">
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            School Gallery
+            {t('gallery.title')}
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Explore the vibrant life and culture of Little Eden School through our photo gallery.
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -50,6 +52,7 @@ export default function GallerySection() {
         >
           <div className="relative max-w-4xl w-full">
             <button
+              type="button"
               onClick={() => setSelectedImage(null)}
               className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
             >

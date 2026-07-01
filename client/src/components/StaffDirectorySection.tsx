@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Mail, Phone, Award } from 'lucide-react';
 import { galleryPaths } from '@/lib/gallery';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface StaffMember {
   name: string;
@@ -13,6 +14,8 @@ interface StaffMember {
 }
 
 export default function StaffDirectorySection() {
+  const { t } = useLanguage();
+
   const staffMembers: StaffMember[] = [
     {
       name: 'Dr. Emmanuel Rwigema',
@@ -62,10 +65,10 @@ export default function StaffDirectorySection() {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            Meet Our Leadership Team
+            {t('staff.title')}
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Experienced educators and administrators dedicated to your child's success.
+            {t('staff.subtitle')}
           </p>
         </div>
 
@@ -138,9 +141,9 @@ export default function StaffDirectorySection() {
 
         {/* Additional Info */}
         <div className="mt-12 md:mt-16 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-6 md:p-8 border-l-4 border-[#0056D2]">
-          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Highly Qualified Faculty</h3>
+          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('staff.facultyTitle')}</h3>
           <p className="text-sm md:text-base text-gray-700">
-            Our team comprises certified educators with advanced qualifications and years of experience in child development and education. We are committed to continuous professional development to provide the best learning experience for your child.
+            {t('staff.facultyText')}
           </p>
         </div>
       </div>

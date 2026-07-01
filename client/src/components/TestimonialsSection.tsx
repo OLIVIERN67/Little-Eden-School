@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Star, Quote } from 'lucide-react';
 import { useState } from 'react';
 
@@ -130,9 +131,9 @@ export default function TestimonialsSection() {
             <p className="text-sm md:text-base lg:text-lg text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto">
               Give your child the gift of excellent education and holistic development. Join 800+ families who trust Little Eden School.
             </p>
-            <button className="inline-block bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base">
-              Start the Admission Process
-            </button>
+            <Button asChild className="inline-flex bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base">
+              <a href="#admissions">Start the Admission Process</a>
+            </Button>
           </div>
         </div>
       </div>

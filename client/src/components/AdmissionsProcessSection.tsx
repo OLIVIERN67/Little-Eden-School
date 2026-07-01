@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { CheckCircle, FileText, Users, Award, Calendar } from 'lucide-react';
 
 interface Step {
@@ -47,7 +48,7 @@ export default function AdmissionsProcessSection() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section id="admissions" className="py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4B400]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#2E8B57]/5 rounded-full blur-3xl"></div>
@@ -155,9 +156,9 @@ export default function AdmissionsProcessSection() {
           <p className="text-sm md:text-base text-blue-100 mb-6 md:mb-8 max-w-2xl mx-auto">
             Start your child's journey to excellence. Submit your application today and join our community of learners.
           </p>
-          <button className="inline-block px-8 md:px-10 py-3 md:py-4 bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            Start Application
-          </button>
+          <Button asChild className="inline-flex px-8 md:px-10 py-3 md:py-4 bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <a href="#contact">Start Application</a>
+          </Button>
         </div>
       </div>
     </section>

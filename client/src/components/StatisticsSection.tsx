@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface Stat {
   label: string;
@@ -83,27 +84,29 @@ function CounterCard({ label, value, suffix, icon }: Stat) {
 }
 
 export default function StatisticsSection() {
+  const { t } = useLanguage();
+
   const stats: Stat[] = [
     { 
-      label: 'Students', 
+      label: t('stats.students'), 
       value: 800, 
       suffix: '+',
       icon: <TrendingUp size={24} />
     },
     { 
-      label: 'Teachers', 
+      label: t('stats.teachers'), 
       value: 65, 
       suffix: '+',
       icon: <TrendingUp size={24} />
     },
     { 
-      label: 'Classrooms', 
+      label: t('stats.classrooms'), 
       value: 32, 
       suffix: '',
       icon: <TrendingUp size={24} />
     },
     { 
-      label: 'Years of Excellence', 
+      label: t('stats.years'), 
       value: 15, 
       suffix: '+',
       icon: <TrendingUp size={24} />
@@ -120,10 +123,10 @@ export default function StatisticsSection() {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            Our Impact in Numbers
+            {t('stats.title')}
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Serving families and building futures through quality education and dedicated service.
+            {t('stats.subtitle')}
           </p>
         </div>
 
@@ -145,7 +148,7 @@ export default function StatisticsSection() {
         {/* Bottom Accent */}
         <div className="mt-12 md:mt-16 text-center">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#0056D2] to-[#2E8B57] rounded-full text-white text-sm font-semibold">
-            Trusted by 800+ families across Rwanda
+            {t('stats.trustLine')}
           </div>
         </div>
       </div>

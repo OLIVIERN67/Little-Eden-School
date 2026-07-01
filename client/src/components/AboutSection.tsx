@@ -1,6 +1,9 @@
 import { galleryPaths } from '@/lib/gallery';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-12 md:py-16 lg:py-24 bg-white">
       <div className="container">
@@ -17,42 +20,44 @@ export default function AboutSection() {
           {/* Content */}
           <div className="order-1 md:order-2">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-4 md:mb-6">
-              About Little Eden School
+              {t('about.title')}
             </h2>
+
+            <p className="text-sm md:text-base text-[#2E8B57] font-semibold mb-4 md:mb-6">{t('about.subtitle')}</p>
 
             <div className="space-y-4 md:space-y-6">
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('about.mission')}</h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  To facilitate first-class education and character development that empowers students to become responsible global citizens and leaders of tomorrow.
+                  {t('about.missionText')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('about.vision')}</h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  To provide the most skillful, competitive citizens who are models of servant leadership in their communities and the world.
+                  {t('about.visionText')}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Our Values</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('about.values')}</h3>
                 <ul className="space-y-2 text-sm md:text-base text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="text-[#F4B400] font-bold mt-1">✓</span>
-                    <span><strong>Excellence:</strong> Commitment to the highest standards in all we do</span>
+                    <span><strong>{t('about.excellence')}:</strong> {t('about.excellenceText')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#F4B400] font-bold mt-1">✓</span>
-                    <span><strong>Integrity:</strong> Honesty and moral principles in all actions</span>
+                    <span><strong>{t('about.integrity')}:</strong> {t('about.integrityText')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#F4B400] font-bold mt-1">✓</span>
-                    <span><strong>Community:</strong> Fostering a supportive, inclusive environment</span>
+                    <span><strong>{t('about.community')}:</strong> {t('about.communityText')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#F4B400] font-bold mt-1">✓</span>
-                    <span><strong>Growth:</strong> Continuous learning and development for all</span>
+                    <span><strong>{t('about.growth')}:</strong> {t('about.growthText')}</span>
                   </li>
                 </ul>
               </div>

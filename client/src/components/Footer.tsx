@@ -1,6 +1,9 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-[#0056D2] text-white py-10 md:py-12 lg:py-16">
       <div className="container">
@@ -9,29 +12,29 @@ export default function Footer() {
           <div>
             <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4">Little Eden School</h3>
             <p className="text-blue-100 text-xs md:text-sm leading-relaxed">
-              Excellence in Education. Nurturing minds, building futures, and creating responsible global citizens.
+              {t('footer.aboutText')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Quick Links</h4>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-1 md:space-y-2">
-              <li><a href="#home" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">Home</a></li>
-              <li><a href="#about" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">About Us</a></li>
-              <li><a href="#academics" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">Academics</a></li>
-              <li><a href="#admissions" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">Admissions</a></li>
-              <li><a href="#contact" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">Contact</a></li>
+              <li><a href="#home" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">{t('footer.home')}</a></li>
+              <li><a href="#about" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">{t('footer.about')}</a></li>
+              <li><a href="#academics" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">{t('footer.academics')}</a></li>
+              <li><a href="#admissions" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">{t('footer.admissions')}</a></li>
+              <li><a href="#contact" className="text-blue-100 hover:text-white transition-colors text-xs md:text-sm">{t('footer.contactLabel')}</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Contact</h4>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">{t('footer.contactLabel')}</h4>
             <div className="space-y-2 md:space-y-3">
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span className="text-blue-100 text-xs md:text-sm">Musanze, Rwanda</span>
+                <span className="text-blue-100 text-xs md:text-sm">{t('footer.location')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} />
@@ -46,7 +49,7 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Follow Us</h4>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">{t('footer.followUs')}</h4>
             <div className="flex gap-2 md:gap-4">
               <a href="#" className="bg-white/20 hover:bg-white/30 p-2 rounded-lg transition-colors active:bg-white/40">
                 <Facebook size={18} />
@@ -69,10 +72,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-blue-100 text-xs md:text-sm gap-3 md:gap-0">
-          <p>&copy; 2024 Little Eden School. All rights reserved.</p>
+          <p>&copy; 2024 Little Eden School. {t('footer.rights')}</p>
           <div className="flex gap-4 md:gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors">{t('footer.privacy')}</a>
+            <a href="#" className="hover:text-white transition-colors">{t('footer.terms')}</a>
           </div>
         </div>
       </div>

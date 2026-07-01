@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
-import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { MapPin, ArrowRight } from 'lucide-react';
 import { galleryPaths } from '@/lib/gallery';
 
 interface Event {
@@ -53,7 +54,7 @@ export default function NewsEventsSection() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="news" className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#F4B400]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2E8B57]/5 rounded-full blur-3xl"></div>
@@ -134,9 +135,9 @@ export default function NewsEventsSection() {
 
         {/* View All Events CTA */}
         <div className="mt-12 md:mt-16 text-center">
-          <button className="inline-block px-8 md:px-10 py-3 md:py-4 bg-gradient-to-r from-[#0056D2] to-[#0040A0] text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            View All Events & News
-          </button>
+          <Button asChild className="inline-flex px-8 md:px-10 py-3 md:py-4 bg-gradient-to-r from-[#0056D2] to-[#0040A0] text-white rounded-lg font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <a href="#contact">View All Events & News</a>
+          </Button>
         </div>
       </div>
     </section>

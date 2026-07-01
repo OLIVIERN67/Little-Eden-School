@@ -2,9 +2,11 @@ import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { galleryPaths } from '@/lib/gallery';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     setIsVisible(true);
@@ -35,7 +37,7 @@ export default function HeroSection() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            Where Excellence Meets Nurturing Care
+            {t('hero.title')}
           </h1>
 
           {/* Animated Subheading */}
@@ -44,7 +46,7 @@ export default function HeroSection() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            Little Eden School is committed to providing world-class education that develops the whole child—academically, socially, and emotionally. Join our community of learners and leaders.
+            {t('hero.description')}
           </p>
 
           {/* Animated CTA Buttons */}
@@ -53,18 +55,11 @@ export default function HeroSection() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <Button
-              size="lg"
-              className="bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] font-bold text-sm sm:text-base py-2 sm:py-3 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Apply Now
+            <Button asChild size="lg" className="bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] font-bold text-sm sm:text-base py-2 sm:py-3 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <a href="#admissions">{t('hero.applyNow')}</a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 font-bold text-sm sm:text-base py-2 sm:py-3 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Learn More
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-sm sm:text-base py-2 sm:py-3 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <a href="#about">{t('hero.learnMore')}</a>
             </Button>
           </div>
 
