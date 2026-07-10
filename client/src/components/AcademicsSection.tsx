@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { BookOpen, Users } from 'lucide-react';
+import { BookOpen, Users, Lightbulb } from 'lucide-react';
 
 export default function AcademicsSection() {
   const programs = [
@@ -15,7 +15,12 @@ export default function AcademicsSection() {
       description: 'Comprehensive curriculum building strong academic foundations in core subjects and life skills.',
       highlights: ['Grades 1-6', 'STEM Focus', 'Character Education'],
     },
-
+    {
+      level: 'Secondary',
+      icon: Lightbulb,
+      description: 'Advanced academics preparing students for university with critical thinking and leadership development.',
+      highlights: ['Grades 7-12', 'Advanced Subjects', 'University Prep'],
+    },
   ];
 
   return (
@@ -31,7 +36,7 @@ export default function AcademicsSection() {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {programs.map((program, index) => {
             const Icon = program.icon;
             return (

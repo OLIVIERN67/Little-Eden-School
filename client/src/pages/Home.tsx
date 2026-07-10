@@ -6,9 +6,6 @@ import AcademicsSection from '@/components/AcademicsSection';
 import StatisticsSection from '@/components/StatisticsSection';
 import FacilitiesSection from '@/components/FacilitiesSection';
 import GallerySection from '@/components/GallerySection';
-import StaffDirectorySection from '@/components/StaffDirectorySection';
-import NewsEventsSection from '@/components/NewsEventsSection';
-import AdmissionsProcessSection from '@/components/AdmissionsProcessSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -25,9 +22,6 @@ export default function Home() {
         <StatisticsSection />
         <FacilitiesSection />
         <GallerySection />
-        <StaffDirectorySection />
-        <NewsEventsSection />
-        <AdmissionsProcessSection />
         <TestimonialsSection />
         <ContactSection />
       </main>

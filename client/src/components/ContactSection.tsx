@@ -2,10 +2,8 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ContactSection() {
-  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +21,7 @@ export default function ContactSection() {
     // Handle form submission
     console.log('Form submitted:', formData);
     setFormData({ name: '', email: '', phone: '', message: '' });
-    alert(t('contact.thanks'));
+    alert('Thank you for your message. We will get back to you soon!');
   };
 
   return (
@@ -31,10 +29,10 @@ export default function ContactSection() {
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            {t('contact.title')}
+            Get In Touch
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            {t('contact.subtitle')}
+            Have questions? We'd love to hear from you. Contact us today!
           </p>
         </div>
 
@@ -46,8 +44,8 @@ export default function ContactSection() {
                 <MapPin className="text-[#0056D2]" size={28} />
               </div>
             </div>
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('contact.address')}</h3>
-            <p className="text-sm md:text-base text-gray-600">{t('footer.location')}</p>
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Location</h3>
+            <p className="text-sm md:text-base text-gray-600">Musanze, Rwanda</p>
           </Card>
 
           <Card className="p-6 md:p-8 text-center hover:shadow-lg transition-shadow">
@@ -56,7 +54,7 @@ export default function ContactSection() {
                 <Phone className="text-[#0056D2]" size={28} />
               </div>
             </div>
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('contact.phone')}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Phone</h3>
             <p className="text-sm md:text-base text-gray-600">(+250) 788 305 797</p>
             <p className="text-sm md:text-base text-gray-600">(+250) 788 585 291</p>
           </Card>
@@ -67,7 +65,7 @@ export default function ContactSection() {
                 <Mail className="text-[#0056D2]" size={28} />
               </div>
             </div>
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{t('contact.email')}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Email</h3>
             <p className="text-sm md:text-base text-gray-600">info@littleeden.rw</p>
           </Card>
         </div>
@@ -76,11 +74,11 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Form */}
           <Card className="p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">{t('contact.sendMessage')}</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.fullName')}
+                  Full Name
                 </label>
                 <input
                   type="text"
@@ -89,13 +87,13 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0056D2]"
-                  placeholder={t('contact.namePlaceholder')}
+                  placeholder="Your name"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.emailAddress')}
+                  Email Address
                 </label>
                 <input
                   type="email"
@@ -104,13 +102,13 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0056D2]"
-                  placeholder={t('contact.emailPlaceholder')}
+                  placeholder="your@email.com"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.phoneNumber')}
+                  Phone Number
                 </label>
                 <input
                   type="tel"
@@ -118,13 +116,13 @@ export default function ContactSection() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0056D2]"
-                  placeholder={t('contact.phonePlaceholder')}
+                  placeholder="(+250) 788 000 000"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.message')}
+                  Message
                 </label>
                 <textarea
                   name="message"
@@ -133,12 +131,12 @@ export default function ContactSection() {
                   required
                   rows={5}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0056D2] resize-none"
-                  placeholder={t('contact.messagePlaceholder')}
+                  placeholder="Your message..."
                 ></textarea>
               </div>
 
               <Button className="w-full bg-[#0056D2] hover:bg-[#0040A0] text-white font-bold">
-                {t('contact.send')}
+                Send Message
               </Button>
             </form>
           </Card>
@@ -151,18 +149,18 @@ export default function ContactSection() {
                   <Clock className="text-[#0056D2]" size={28} />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">{t('contact.hours')}</h3>
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Office Hours</h3>
                   <div className="space-y-2 md:space-y-3">
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">{t('contact.monday')}</p>
+                      <p className="font-semibold text-gray-900 text-sm md:text-base">Monday - Friday</p>
                       <p className="text-gray-600 text-xs md:text-sm">7:00 AM - 5:00 PM</p>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">{t('contact.saturday')}</p>
+                      <p className="font-semibold text-gray-900 text-sm md:text-base">Saturday</p>
                       <p className="text-gray-600 text-xs md:text-sm">9:00 AM - 1:00 PM</p>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">{t('contact.sunday')}</p>
+                      <p className="font-semibold text-gray-900 text-sm md:text-base">Sunday</p>
                       <p className="text-gray-600 text-xs md:text-sm">Closed</p>
                     </div>
                   </div>
@@ -170,12 +168,12 @@ export default function ContactSection() {
               </div>
 
               <div className="border-t border-gray-200 pt-6 md:pt-8 mt-6 md:mt-8">
-                <h4 className="font-bold text-gray-900 mb-2 md:mb-3 text-sm md:text-base">{t('footer.quickLinks')}</h4>
+                <h4 className="font-bold text-gray-900 mb-2 md:mb-3 text-sm md:text-base">Quick Links</h4>
                 <ul className="space-y-1 md:space-y-2">
-                  <li><a href="#admissions" className="text-[#0056D2] hover:underline text-xs md:text-sm">{t('footer.admissions')}</a></li>
-                  <li><a href="#academics" className="text-[#0056D2] hover:underline text-xs md:text-sm">{t('footer.academics')}</a></li>
-                  <li><a href="#facilities" className="text-[#0056D2] hover:underline text-xs md:text-sm">{t('footer.programs')}</a></li>
-                  <li><a href="#" className="text-[#0056D2] hover:underline text-xs md:text-sm">{t('contact.downloads')}</a></li>
+                  <li><a href="#admissions" className="text-[#0056D2] hover:underline text-xs md:text-sm">Admissions</a></li>
+                  <li><a href="#academics" className="text-[#0056D2] hover:underline text-xs md:text-sm">Academic Programs</a></li>
+                  <li><a href="#facilities" className="text-[#0056D2] hover:underline text-xs md:text-sm">Facilities</a></li>
+                  <li><a href="#" className="text-[#0056D2] hover:underline text-xs md:text-sm">Downloads</a></li>
                 </ul>
               </div>
             </Card>

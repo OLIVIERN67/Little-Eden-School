@@ -1,9 +1,6 @@
 import { Users, BookOpen, Zap, Trophy, Heart, Globe } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function WhyChooseUsSection() {
-  const { t } = useLanguage();
-
   const reasons = [
     {
       icon: Users,
@@ -38,14 +35,14 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="student-life" className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="why-choose" className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            {t('whyChoose.title')}
+            Why Choose Little Eden School
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            {t('whyChoose.subtitle')}
+            We provide a comprehensive educational experience that nurtures academic excellence, character development, and personal growth.
           </p>
         </div>
 

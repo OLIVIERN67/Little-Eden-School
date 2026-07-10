@@ -1,10 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { BookOpen, Microscope, Gamepad2, Bus, Laptop, Users } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function FacilitiesSection() {
-  const { t } = useLanguage();
-
   const facilities = [
     {
       icon: BookOpen,
@@ -43,10 +40,10 @@ export default function FacilitiesSection() {
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            {t('facilities.title')}
+            Our Facilities
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            {t('facilities.subtitle')}
+            State-of-the-art infrastructure designed to support comprehensive learning and development.
           </p>
         </div>
 
