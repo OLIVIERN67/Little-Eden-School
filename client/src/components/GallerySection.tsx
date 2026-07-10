@@ -7,12 +7,12 @@ export default function GallerySection() {
 
   const galleryImages = [
     {
-      src: '/Highlights/GRADU_1.jpg',
+      src: '/Highlights/GRAD(61).jpg',
       alt: 'Graduation Ceremony',
       category: 'Achievements',
     },
     {
-      src: '/Highlights/GRADU_2.jpg',
+      src: '/Highlights/GRAD(41).jpg',
       alt: 'Student Success',
       category: 'Students',
     },
@@ -22,7 +22,7 @@ export default function GallerySection() {
       category: 'Academics',
     },
     {
-      src: '/Highlights/GRADU_4.jpg',
+      src: '/Highlights/GRAD(45).jpg',
       alt: 'School Events',
       category: 'Events',
     },
@@ -32,7 +32,7 @@ export default function GallerySection() {
       category: 'Campus',
     },
     {
-      src: '/Highlights/GRADU_6.jpg',
+      src: '/Highlights/GRAD(40).jpg',
       alt: 'Learning Environment',
       category: 'Facilities',
     },
@@ -52,7 +52,7 @@ export default function GallerySection() {
       category: 'Academics',
     },
     {
-      src: '/Highlights/GRADU_10.jpg',
+      src: '/Highlights/GRAD(65).jpg',
       alt: 'Team Building',
       category: 'Events',
     },
@@ -77,12 +77,12 @@ export default function GallerySection() {
       category: 'Activities',
     },
     {
-      src: '/Highlights/GRADU_15.jpg',
+      src: '/Highlights/GRAD(74).jpg',
       alt: 'Campus Facilities',
       category: 'Facilities',
     },
     {
-      src: '/Highlights/GRADU_16.jpg',
+      src: '/Highlights/GRAD(76).jpg',
       alt: 'School Community',
       category: 'Community',
     },

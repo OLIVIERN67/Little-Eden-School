@@ -14,7 +14,7 @@ export default function Header() {
     { label: 'Facilities', href: '#facilities' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'News & Events', href: '#news' },
-    { label: 'Contact', href: '#contact' },
+   
   ];
 
   return (
@@ -23,13 +23,13 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-2 md:gap-3">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663259835730/kqJaYi8UEBtobpKDmNc9mD/logo-little-eden-mvtspdQQcdjLeaSwfKnsjp.webp"
+            src="logo.jpeg"
             alt="Little Eden School Logo"
             className="h-10 w-10 md:h-12 md:w-12"
           />
           <div className="hidden sm:block">
             <h1 className="text-lg md:text-xl font-bold text-[#0056D2]">Little Eden</h1>
-            <p className="text-xs text-gray-600">Excellence in Education</p>
+            {/* <p className="text-xs text-gray-600">Excellence in Education</p> */}
           </div>
         </div>
 
