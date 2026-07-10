@@ -6,7 +6,7 @@ export default function AboutSection() {
           {/* Image */}
           <div className="order-2 md:order-1">
             <img
-              src="/manus-storage/EDEN.jpg_f87f6cda.jpeg"
+              src="/Highlights/GRADU_3.jpg"
               alt="Little Eden School Classroom"
               className="rounded-lg shadow-lg w-full h-auto"
             />

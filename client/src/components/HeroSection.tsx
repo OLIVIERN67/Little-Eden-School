@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/manus-storage/EDEN_10.jpg_347607f4.jpeg)',
+          backgroundImage: 'url(/Highlights/GRADU_5.jpg)',
         }}
       >
         {/* Overlay */}

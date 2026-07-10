@@ -7,104 +7,89 @@ export default function GallerySection() {
 
   const galleryImages = [
     {
-      src: '/manus-storage/EDEN_10.jpg_347607f4.jpeg',
-      alt: 'Campus Activities',
-      category: 'Campus',
+      src: '/Highlights/GRADU_1.jpg',
+      alt: 'Graduation Ceremony',
+      category: 'Achievements',
     },
     {
-      src: '/manus-storage/EDEN_5.jpg_04c80c41.jpeg',
-      alt: 'Sports & Recreation',
-      category: 'Sports',
-    },
-    {
-      src: '/manus-storage/EDEN.jpg_f87f6cda.jpeg',
-      alt: 'Classroom Learning',
-      category: 'Academics',
-    },
-    {
-      src: '/manus-storage/EDEN_1.jpg_cf768854.jpeg',
-      alt: 'Student Engagement',
-      category: 'Students',
-    },
-    {
-      src: '/manus-storage/EDEN_2.jpg_30704005.jpeg',
-      alt: 'School Events',
-      category: 'Events',
-    },
-    {
-      src: '/manus-storage/EDEN_3.jpg_11bf3ebf.jpeg',
-      alt: 'Campus Facilities',
-      category: 'Facilities',
-    },
-    {
-      src: '/manus-storage/EDEN_4.jpg_23b0194f.jpeg',
-      alt: 'Student Activities',
-      category: 'Activities',
-    },
-    {
-      src: '/manus-storage/EDEN_6.jpg_86a6f2f9.jpeg',
-      alt: 'Outdoor Learning',
-      category: 'Campus',
-    },
-    {
-      src: '/manus-storage/EDEN_7.jpg_1e2b216a.jpeg',
-      alt: 'Team Building',
-      category: 'Events',
-    },
-    {
-      src: '/manus-storage/EDEN_8.jpg_6ed3d870.jpeg',
-      alt: 'Classroom Moments',
-      category: 'Academics',
-    },
-    {
-      src: '/manus-storage/EDEN_9.jpg_e7bca16c.jpeg',
-      alt: 'School Community',
-      category: 'Community',
-    },
-    {
-      src: '/manus-storage/EDEN_11.jpg_cf07b4a8.jpeg',
+      src: '/Highlights/GRADU_2.jpg',
       alt: 'Student Success',
       category: 'Students',
     },
     {
-      src: '/manus-storage/EDEN_12.jpg_8ea53271.jpeg',
+      src: '/Highlights/GRADU_3.jpg',
+      alt: 'Academic Excellence',
+      category: 'Academics',
+    },
+    {
+      src: '/Highlights/GRADU_4.jpg',
+      alt: 'School Events',
+      category: 'Events',
+    },
+    {
+      src: '/Highlights/GRADU_5.jpg',
       alt: 'Campus Life',
       category: 'Campus',
     },
     {
-      src: '/manus-storage/EDEN_13.jpg_43bb5024.jpeg',
+      src: '/Highlights/GRADU_6.jpg',
       alt: 'Learning Environment',
       category: 'Facilities',
     },
     {
-      src: '/manus-storage/EDEN_14.jpg_b2b72dff.jpeg',
-      alt: 'Student Achievements',
-      category: 'Achievements',
+      src: '/Highlights/GRADU_7.jpg',
+      alt: 'Student Activities',
+      category: 'Activities',
     },
     {
-      src: '/manus-storage/EDEN_15.jpg_09e4f697.jpeg',
+      src: '/Highlights/GRADU_8.jpg',
+      alt: 'Community Events',
+      category: 'Community',
+    },
+    {
+      src: '/Highlights/GRADU_9.jpg',
+      alt: 'Classroom Moments',
+      category: 'Academics',
+    },
+    {
+      src: '/Highlights/GRADU_10.jpg',
+      alt: 'Team Building',
+      category: 'Events',
+    },
+    {
+      src: '/Highlights/GRADU_11.jpg',
+      alt: 'Outdoor Learning',
+      category: 'Campus',
+    },
+    {
+      src: '/Highlights/GRADU_12.jpg',
+      alt: 'Student Engagement',
+      category: 'Students',
+    },
+    {
+      src: '/Highlights/GRADU_13.jpg',
       alt: 'School Programs',
       category: 'Programs',
     },
     {
-      src: '/manus-storage/EDEN_16.jpg_17df2aa1.jpeg',
+      src: '/Highlights/GRADU_14.jpg',
       alt: 'Extracurricular',
       category: 'Activities',
     },
     {
-      src: '/manus-storage/EDEN_17.jpg_f81efd2d.jpeg',
-      alt: 'Community Events',
-      category: 'Events',
+      src: '/Highlights/GRADU_15.jpg',
+      alt: 'Campus Facilities',
+      category: 'Facilities',
     },
     {
-      src: '/manus-storage/EDEN_18.jpg_276b9ec4.jpeg',
-      alt: 'Campus Tour',
-      category: 'Campus',
+      src: '/Highlights/GRADU_16.jpg',
+      alt: 'School Community',
+      category: 'Community',
     },
     {
-      src: '/manus-storage/EDEN_19.jpg (1)_8a9de58c.jpeg',
-      alt: 'School Highlights',
-      category: 'Highlights',
+      src: '/Highlights/GRADU_16.jpg',
+      alt: 'School Community',
+      category: 'Community',
     },
   ];
 
