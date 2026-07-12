@@ -22,7 +22,7 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  To facilitate first-class education and character development that empowers students to become responsible global citizens and leaders of tomorrow.
+                  we facilitate first-class education and character development that empowers students to become responsible global citizens and leaders of tomorrow.
                 </p>
               </div>
 
