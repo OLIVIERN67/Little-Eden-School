@@ -15,12 +15,12 @@ export default function AcademicsSection() {
       description: 'Comprehensive curriculum building strong academic foundations in core subjects and life skills.',
       highlights: ['Grades 1-6', 'STEM Focus', 'Character Education'],
     },
-    {
-      level: 'Secondary',
-      icon: Lightbulb,
-      description: 'Advanced academics preparing students for university with critical thinking and leadership development.',
-      highlights: ['Grades 7-12', 'Advanced Subjects', 'University Prep'],
-    },
+    // {
+    //   level: 'Secondary',
+    //   icon: Lightbulb,
+    //   description: 'Advanced academics preparing students for university with critical thinking and leadership development.',
+    //   highlights: ['Grades 7-12', 'Advanced Subjects', 'University Prep'],
+    // },
   ];
 
   return (
