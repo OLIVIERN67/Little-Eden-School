@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
+import { useT } from '@/i18n/useT';
 
 export default function HeroSection() {
+  const t = useT();
+
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -16,35 +19,43 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 py-16 md:py-24 lg:py-32">
+      <div className="container relative z-10 py-12 md:py-20 lg:py-28">
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-            Where Excellence Meets Nurturing Care
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 md:mb-5 leading-tight">
+            {t('hero.title')}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 md:mb-8 leading-relaxed">
-            Little Eden School is committed to providing world-class education that develops the whole child—academically, socially, and emotionally. Join our community of learners and leaders.
+          <p className="text-sm sm:text-base md:text-lg text-gray-100 mb-5 md:mb-7 leading-relaxed">
+            {t('hero.subtitle')}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Button
               size="lg"
-              className="bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] font-bold text-sm sm:text-base py-2 sm:py-3 h-auto"
+              className="bg-[#F4B400] hover:bg-[#E0A200] text-[#0056D2] font-bold text-xs sm:text-sm py-2 h-auto"
+              onClick={() => {
+                const el = document.querySelector('#admissions');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              Apply Now
+              {t('hero.cta.apply')}
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 font-bold text-sm sm:text-base py-2 sm:py-3 h-auto"
+              className="border-white text-white hover:bg-white/10 font-bold text-xs sm:text-sm py-2 h-auto"
+              onClick={() => {
+                const el = document.querySelector('#about');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              Learn More
+              {t('hero.cta.learnMore')}
             </Button>
           </div>
 
           {/* Scroll Indicator */}
-          <div className="mt-12 md:mt-16 animate-bounce hidden sm:block">
-            <ChevronDown className="text-white" size={32} />
+          <div className="mt-10 md:mt-14 animate-bounce hidden sm:block">
+            <ChevronDown className="text-white" size={28} />
           </div>
         </div>
       </div>

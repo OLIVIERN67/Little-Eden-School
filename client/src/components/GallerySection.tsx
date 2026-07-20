@@ -1,127 +1,61 @@
 import { useState } from 'react';
-import { Card } from '@/components/ui/card';
 import { X } from 'lucide-react';
+import { useT } from '@/i18n/useT';
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const t = useT();
 
   const galleryImages = [
-    {
-      src: '/Highlights/GRAD(61).jpg',
-      alt: 'Graduation Ceremony',
-      category: 'Achievements',
-    },
-    {
-      src: '/Highlights/GRAD(41).jpg',
-      alt: 'Student Success',
-      category: 'Students',
-    },
-    {
-      src: '/Highlights/GRADU_3.jpg',
-      alt: 'Academic Excellence',
-      category: 'Academics',
-    },
-    {
-      src: '/Highlights/GRAD(45).jpg',
-      alt: 'School Events',
-      category: 'Events',
-    },
-    {
-      src: '/Highlights/GRADU_5.jpg',
-      alt: 'Campus Life',
-      category: 'Campus',
-    },
-    {
-      src: '/Highlights/GRAD(40).jpg',
-      alt: 'Learning Environment',
-      category: 'Facilities',
-    },
-    {
-      src: '/Highlights/GRADU_7.jpg',
-      alt: 'Student Activities',
-      category: 'Activities',
-    },
-    {
-      src: '/Highlights/GRADU_8.jpg',
-      alt: 'Community Events',
-      category: 'Community',
-    },
-    {
-      src: '/Highlights/GRADU_9.jpg',
-      alt: 'Classroom Moments',
-      category: 'Academics',
-    },
-    {
-      src: '/Highlights/GRAD(65).jpg',
-      alt: 'Team Building',
-      category: 'Events',
-    },
-    {
-      src: '/Highlights/GRADU_11.jpg',
-      alt: 'Outdoor Learning',
-      category: 'Campus',
-    },
-    {
-      src: '/Highlights/GRADU_12.jpg',
-      alt: 'Student Engagement',
-      category: 'Students',
-    },
-    {
-      src: '/Highlights/GRADU_13.jpg',
-      alt: 'School Programs',
-      category: 'Programs',
-    },
-    {
-      src: '/Highlights/GRADU_14.jpg',
-      alt: 'Extracurricular',
-      category: 'Activities',
-    },
-    {
-      src: '/Highlights/GRAD(74).jpg',
-      alt: 'Campus Facilities',
-      category: 'Facilities',
-    },
-    {
-      src: '/Highlights/GRAD(76).jpg',
-      alt: 'School Community',
-      category: 'Community',
-    },
-    {
-      src: '/Highlights/GRADU_16.jpg',
-      alt: 'School Community',
-      category: 'Community',
-    },
+    { src: '/Highlights/GRAD(61).jpg', altKey: 'gallery.img.grad61', categoryKey: 'gallery.cat.achievements' },
+    { src: '/Highlights/GRAD(41).jpg', altKey: 'gallery.img.grad41', categoryKey: 'gallery.cat.students' },
+    { src: '/Highlights/GRADU_3.jpg', altKey: 'gallery.img.gradu3', categoryKey: 'gallery.cat.academics' },
+    { src: '/Highlights/GRAD(45).jpg', altKey: 'gallery.img.grad45', categoryKey: 'gallery.cat.events' },
+    { src: '/Highlights/GRADU_5.jpg', altKey: 'gallery.img.gradu5', categoryKey: 'gallery.cat.campus' },
+    { src: '/Highlights/GRAD(40).jpg', altKey: 'gallery.img.grad40', categoryKey: 'gallery.cat.facilities' },
+    { src: '/Highlights/GRADU_7.jpg', altKey: 'gallery.img.gradu7', categoryKey: 'gallery.cat.activities' },
+    { src: '/Highlights/GRADU_8.jpg', altKey: 'gallery.img.gradu8', categoryKey: 'gallery.cat.community' },
+    { src: '/Highlights/GRADU_9.jpg', altKey: 'gallery.img.gradu9', categoryKey: 'gallery.cat.academics' },
+    { src: '/Highlights/GRAD(65).jpg', altKey: 'gallery.img.grad65', categoryKey: 'gallery.cat.events' },
+    { src: '/Highlights/GRADU_11.jpg', altKey: 'gallery.img.gradu11', categoryKey: 'gallery.cat.campus' },
+    { src: '/Highlights/GRADU_12.jpg', altKey: 'gallery.img.gradu12', categoryKey: 'gallery.cat.students' },
+    { src: '/Highlights/GRADU_13.jpg', altKey: 'gallery.img.gradu13', categoryKey: 'gallery.cat.programs' },
+    { src: '/Highlights/GRADU_14.jpg', altKey: 'gallery.img.gradu14', categoryKey: 'gallery.cat.activities' },
+    { src: '/Highlights/GRAD(74).jpg', altKey: 'gallery.img.grad74', categoryKey: 'gallery.cat.facilities' },
+    { src: '/Highlights/GRAD(76).jpg', altKey: 'gallery.img.grad76', categoryKey: 'gallery.cat.community' },
+    { src: '/Highlights/GRADU_16.jpg', altKey: 'gallery.img.gradu16', categoryKey: 'gallery.cat.community' },
   ];
 
   return (
     <section id="gallery" className="py-12 md:py-16 lg:py-24 bg-white">
       <div className="container">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0056D2] mb-3 md:mb-4">
-            School Gallery
+            {t('gallery.title')}
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Explore the vibrant life and culture of Little Eden School through our photo gallery.
+            {t('gallery.subtitle')}
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Gallery Grid - responsive: 1col mobile, 2col sm, 3col md, 4col lg */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group h-64 sm:h-56"
+              className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group aspect-square"
               onClick={() => setSelectedImage(image.src)}
             >
               <img
                 src={image.src}
-                alt={image.alt}
+                alt={t(image.altKey)}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 md:p-3">
                 <div>
-                  <p className="text-white font-semibold text-sm">{image.alt}</p>
-                  <p className="text-blue-200 text-xs">{image.category}</p>
+                  <p className="text-white font-semibold text-[10px] md:text-xs">{t(image.altKey)}</p>
+                  <p className="text-blue-200 text-[8px] md:text-[10px]">{t(image.categoryKey)}</p>
                 </div>
               </div>
             </div>
@@ -132,20 +66,24 @@ export default function GallerySection() {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-3 md:p-4"
           onClick={() => setSelectedImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={t('gallery.lightbox.close')}
         >
-          <div className="relative max-w-4xl w-full">
+          <div className="relative max-w-4xl w-full max-h-[90vh]">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+              className="absolute -top-8 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label={t('gallery.lightbox.close')}
             >
-              <X size={32} />
+              <X size={28} />
             </button>
             <img
               src={selectedImage}
-              alt="Gallery Image"
-              className="w-full h-auto rounded-lg"
+              alt={t('gallery.lightbox.image')}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
           </div>

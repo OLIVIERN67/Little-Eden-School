@@ -1,0 +1,1 @@
+Temporary note for i18n work: replace hardcoded UI strings in React components with i18n keys using useT().

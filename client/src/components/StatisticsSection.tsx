@@ -1,15 +1,17 @@
 import { useEffect, useState, useRef } from 'react';
+import { useT } from '@/i18n/useT';
 
 interface Stat {
-  label: string;
+  labelKey: string;
   value: number;
   suffix: string;
 }
 
-function CounterCard({ label, value, suffix }: Stat) {
+function CounterCard({ labelKey, value, suffix }: Stat) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,38 +54,40 @@ function CounterCard({ label, value, suffix }: Stat) {
   return (
     <div
       ref={ref}
-      className="text-center p-4 md:p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+      className="text-center p-3 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
     >
-      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0056D2] mb-1 md:mb-2">
+      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0056D2] mb-1">
         {count.toLocaleString()}{suffix}
       </div>
-      <p className="text-gray-600 font-semibold text-xs md:text-sm">{label}</p>
+      <p className="text-gray-600 font-semibold text-[10px] md:text-xs">{t(labelKey)}</p>
     </div>
   );
 }
 
 export default function StatisticsSection() {
+  const t = useT();
+
   const stats: Stat[] = [
-    { label: 'Students', value: 800, suffix: '+' },
-    { label: 'Teachers', value: 65, suffix: '+' },
-    { label: 'Classrooms', value: 32, suffix: '' },
-    { label: 'Years of Excellence', value: 15, suffix: '+' },
+    { labelKey: 'stats.card.students', value: 800, suffix: '+' },
+    { labelKey: 'stats.card.teachers', value: 65, suffix: '+' },
+    { labelKey: 'stats.card.classrooms', value: 32, suffix: '' },
+    { labelKey: 'stats.card.years', value: 15, suffix: '+' },
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-r from-[#0056D2] to-[#0040A0] text-white">
+    <section className="py-10 md:py-14 lg:py-20 bg-gradient-to-r from-[#0056D2] to-[#0040A0] text-white">
       <div className="container">
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-            Our Impact in Numbers
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-3">
+            {t('stats.title')}
           </h2>
-          <p className="text-sm md:text-base lg:text-lg text-blue-100 max-w-2xl mx-auto px-2">
-            Serving families and building futures through quality education and dedicated service.
+          <p className="text-xs md:text-sm lg:text-base text-blue-100 max-w-2xl mx-auto px-2">
+            {t('stats.subtitle')}
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Stats Grid - 2x2 on mobile, 4col on lg */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
           {stats.map((stat, index) => (
             <CounterCard key={index} {...stat} />
           ))}
