@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Users } from 'lucide-react';
 import { useT } from '@/i18n/useT';
+import { staffMembers } from '@/data/staff';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -69,6 +70,41 @@ export default function ContactSection() {
             <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">{t('contact.card.email.title')}</h3>
             <p className="text-xs md:text-sm text-gray-600">{t('footer.contact.email')}</p>
           </Card>
+        </div>
+
+        {/* Staff Section */}
+        <div className="mb-8 md:mb-12">
+          <div className="text-center mb-8">
+            <div className="flex justify-center mb-3">
+              <div className="bg-blue-50 p-3 rounded-full">
+                <Users className="text-[#0056D2]" size={28} />
+              </div>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{t('contact.staff.title')}</h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            {staffMembers.map((member) => (
+              <Card key={member.role} className="p-5 md:p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="w-24 h-24 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
+                  {member.image ? (
+                    <img src={member.image} alt={`${member.role}: ${member.name}`} className="w-full h-full object-cover" />
+                  ) : (
+                    /* Placeholder when no image is set */
+                    <div className="text-gray-400">
+                      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                <h4 className="text-base md:text-lg font-bold text-gray-900 mb-1">{member.role}: {member.name}</h4>
+                <a href={`tel:${member.phone}`} className="text-[#0056D2] hover:underline text-sm">
+                  {member.phone}
+                </a>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Contact Form and Hours - stacked on mobile, side-by-side on lg */}
