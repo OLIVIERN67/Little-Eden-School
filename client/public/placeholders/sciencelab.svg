@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#e8eef5"/>
+  <rect x="24" y="24" width="752" height="452" fill="none" stroke="#c3d0e0" stroke-width="3" stroke-dasharray="12 8"/>
+  <g transform="translate(400 195)">
+    <path d="M-40,-70 L-12,0 A40,40 0 0 0 12,0 L40,-70 Z" fill="#b0c4de"/>
+    <rect x="-70" y="-78" width="140" height="12" rx="6" fill="#9fb6d2"/>
+    <circle cx="-30" cy="-40" r="7" fill="#8fd3a5"/>
+    <circle cx="0" cy="-52" r="7" fill="#f5c98a"/>
+    <circle cx="30" cy="-36" r="7" fill="#b7a4e8"/>
+  </g>
+  <text x="400" y="320" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#5b769b" text-anchor="middle">Science Lab</text>
+  <text x="400" y="360" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#8ba3c0" text-anchor="middle">Facility photo coming soon</text>
+</svg>
+

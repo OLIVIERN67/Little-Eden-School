@@ -6,12 +6,12 @@ export default function FacilitiesSection() {
   const t = useT();
 
   const facilityKeys = [
-    { icon: BookOpen, key: 'facilities.library' },
-    { icon: Microscope, key: 'facilities.sciencelab' },
-    { icon: Laptop, key: 'facilities.computerlab' },
-    { icon: Gamepad2, key: 'facilities.playground' },
-    { icon: Bus, key: 'facilities.transport' },
-    { icon: Users, key: 'facilities.smartclassrooms' },
+    { icon: BookOpen, key: 'facilities.library', image: '/placeholders/library.svg' },
+    { icon: Microscope, key: 'facilities.sciencelab', image: '/placeholders/sciencelab.svg' },
+    { icon: Laptop, key: 'facilities.computerlab', image: '/placeholders/computerlab.svg' },
+    { icon: Gamepad2, key: 'facilities.playground', image: '/Highlights/Playground.jpeg' },
+    { icon: Bus, key: 'facilities.transport', image: '/placeholders/transport.svg' },
+    { icon: Users, key: 'facilities.smartclassrooms', image: '/placeholders/smartclassrooms.svg' },
   ];
 
   const featureKeys = [
@@ -41,6 +41,16 @@ export default function FacilitiesSection() {
                 key={index}
                 className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
+                {facility.image && (
+                  <div className="relative h-40 md:h-48 overflow-hidden">
+                    <img
+                      src={facility.image}
+                      alt={t(`${facility.key}.title`)}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <div className="p-5 md:p-6">
                   <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#0056D2] to-[#0040A0] rounded-lg mb-3 md:mb-4 group-hover:scale-110 transition-transform">
                     <Icon className="text-white" size={24} />

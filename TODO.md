@@ -1,27 +1,20 @@
-## i18n hardcoded text removal
+# Task: Match Gallery Images to Captions & Add Facility Images
 
-- [x] Inspect and list all remaining hardcoded user-facing strings in React components
+## Steps
 
-- [ ] Add missing translation keys to `client/src/i18n/locales/en.json`, `fr.json`, `rw.json`
-- [ ] Refactor components to remove hardcoded strings and use `useT()` for every user-facing string
-  - [ ] ContactSection (all strings)
+- [x] 1. Update `GallerySection.tsx` to use descriptive-named images that match captions:
+  - [x] "Academic Excellence" → `academic excellence.jpg` (replacing `GRADU_3.jpg`)
+  - [x] "Student Success" → `student success.jpg` (replacing `GRAD(41).jpg`)
+  - [x] "Classroom Moments" → `Classroom moments.jpeg` (replacing `GRADU_9.jpg`)
+  - [x] "Team Building" → `team building.jpg` (replacing `GRAD(65).jpg`)
+- [x] 2. Update `FacilitiesSection.tsx` to add real photos / placeholders to facility cards:
+  - [x] Add `image` field to facility data
+  - [x] Playground → `/Highlights/Playground.jpeg` (real photo)
+  - [x] Library, Science Lab, Computer Lab, Transport, Smart Classrooms → placeholder images (to be replaced later)
+  - [x] Render the image in each facility Card
 
+## Verification
 
-
-
-  - [ ] Header
-  - [ ] Footer
-  - [ ] HeroSection
-  - [ ] AboutSection
-  - [ ] WhyChooseUsSection
-  - [ ] AcademicsSection
-  - [ ] StatisticsSection
-  - [ ] FacilitiesSection
-  - [ ] GallerySection
-  - [ ] TestimonialsSection
-  - [ ] ContactSection
-  - [ ] FloatingWhatsApp
-- [ ] Replace Contact form submit `alert()` with translated message
-- [ ] Build/test project (`pnpm build`)
-- [ ] Final verification: language switching updates all text
+- [x] Verify image paths are correct (files exist in `client/public/Highlights/`)
+- [x] Confirm build succeeds (`npx tsc --noEmit` passed with no errors)
 
