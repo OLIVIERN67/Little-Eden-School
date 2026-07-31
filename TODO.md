@@ -13,8 +13,14 @@
   - [x] Library, Science Lab, Computer Lab, Transport, Smart Classrooms → placeholder images (to be replaced later)
   - [x] Render the image in each facility Card
 
+## UI Improvements (Round 2)
+
+- [x] Staff photos centered in square frames (`rounded-lg` instead of `rounded-full`), `object-cover object-top` so faces stay visible
+- [x] Facility images use `aspect-video` container with `object-cover object-center` to prevent distortion/stretching
+- [x] Regenerated all 5 SVG placeholders at 1280x720 (16:9) aspect ratio for consistent display
+
 ## Verification
 
 - [x] Verify image paths are correct (files exist in `client/public/Highlights/`)
-- [x] Confirm build succeeds (`npx tsc --noEmit` passed with no errors)
+- [x] Confirm build succeeds (`npx tsc --noEmit` passed, `npm run build` succeeded)
 

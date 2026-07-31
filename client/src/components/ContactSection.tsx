@@ -86,12 +86,12 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {staffMembers.map((member) => (
               <Card key={member.role} className="p-5 md:p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 md:w-32 md:h-32 mx-auto mb-4 bg-gray-100 rounded-lg overflow-hidden">
                   {member.image ? (
-                    <img src={member.image} alt={`${member.role}: ${member.name}`} className="w-full h-full object-cover" />
+                    <img src={member.image} alt={`${member.role}: ${member.name}`} className="w-full h-full object-cover object-top" />
                   ) : (
                     /* Placeholder when no image is set */
-                    <div className="text-gray-400">
+                    <div className="w-full h-full flex items-center justify-center text-gray-400">
                       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>

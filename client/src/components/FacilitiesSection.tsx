@@ -42,11 +42,11 @@ export default function FacilitiesSection() {
                 className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
                 {facility.image && (
-                  <div className="relative h-40 md:h-48 overflow-hidden">
+                  <div className="relative aspect-video bg-gray-100 overflow-hidden">
                     <img
                       src={facility.image}
                       alt={t(`${facility.key}.title`)}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
