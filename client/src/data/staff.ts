@@ -13,7 +13,7 @@ export const staffMembers: StaffMember[] = [
     // Add image path here, e.g. image: "/staff/director.jpg"
   },
   {
-    role: "Headteacher",
+    role: "Head-teacher",
     name: "DUKUZYMUREMYI CHANTAL",
     phone: "+250783310595",
     // Add image path here, e.g. image: "/staff/headteacher.jpg"
