@@ -10,13 +10,13 @@ export const staffMembers: StaffMember[] = [
     role: "Director",
     name: "IMANISHIMWE Amani",
     phone: "+250787999646",
-    // Add image path here, e.g. image: "/staff/director.jpg"
+     image: "/Highlights/IMANISHIMWE Amani.png",
   },
   {
     role: "Head-teacher",
     name: "DUKUZYMUREMYI CHANTAL",
     phone: "+250783310595",
-    // Add image path here, e.g. image: "/staff/headteacher.jpg"
+   image: "/Highlights/ht.png",
   },
   {
     role: "Secretary",
