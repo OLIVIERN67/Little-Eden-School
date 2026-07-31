@@ -1,15 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#e8eef5"/>
-  <rect x="32" y="32" width="1216" height="656" fill="none" stroke="#c3d0e0" stroke-width="3" stroke-dasharray="12 8"/>
-  <g transform="translate(640 275)">
-    <rect x="-110" y="-55" width="220" height="90" rx="20" fill="#b0c4de"/>
-    <rect x="-80" y="-80" width="100" height="35" rx="14" fill="#9fb6d2"/>
-    <rect x="40" y="-30" width="40" height="34" rx="6" fill="#8fd3a5"/>
-    <circle cx="-55" cy="55" r="24" fill="#5b769b"/>
-    <circle cx="55" cy="55" r="24" fill="#5b769b"/>
-    <circle cx="-55" cy="55" r="10" fill="#c3d0e0"/>
-    <circle cx="55" cy="55" r="10" fill="#c3d0e0"/>
+<svg xmlns="SECRETARY.jpeg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f1f5f9"/>
+  <rect x="16" y="16" width="1248" height="688" rx="12" fill="none" stroke="#dbe3ec" stroke-width="2"/>
+  <g stroke="#93a8bf" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="562" y="248" width="156" height="88" rx="18"/>
+    <line x1="562" y1="290" x2="718" y2="290"/>
+    <line x1="605" y1="248" x2="605" y2="290"/>
+    <line x1="648" y1="248" x2="648" y2="290"/>
+    <line x1="691" y1="248" x2="691" y2="290"/>
   </g>
-  <text x="640" y="470" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" fill="#5b769b" text-anchor="middle">School Transport</text>
-  <text x="640" y="520" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#8ba3c0" text-anchor="middle">Facility photo coming soon</text>
+  <circle cx="606" cy="358" r="13" fill="#93a8bf"/>
+  <circle cx="674" cy="358" r="13" fill="#93a8bf"/>
 </svg>

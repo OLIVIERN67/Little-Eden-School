@@ -2,11 +2,9 @@
   <rect width="1280" height="720" fill="#f1f5f9"/>
   <rect x="16" y="16" width="1248" height="688" rx="12" fill="none" stroke="#dbe3ec" stroke-width="2"/>
   <g stroke="#93a8bf" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="558" y="232" width="164" height="104" rx="8"/>
-    <line x1="586" y1="262" x2="694" y2="262"/>
-    <line x1="586" y1="288" x2="670" y2="288"/>
-    <line x1="586" y1="314" x2="640" y2="314"/>
-    <line x1="640" y1="336" x2="640" y2="364"/>
-    <line x1="602" y1="364" x2="678" y2="364"/>
+    <path d="M600 240 L600 334"/>
+    <path d="M680 240 L680 334"/>
+    <line x1="582" y1="246" x2="698" y2="246"/>
   </g>
+  <rect x="590" y="334" width="100" height="14" rx="7" fill="#93a8bf"/>
 </svg>

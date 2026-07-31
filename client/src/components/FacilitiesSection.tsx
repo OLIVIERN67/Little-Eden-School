@@ -10,8 +10,8 @@ export default function FacilitiesSection() {
     { icon: Microscope, key: 'facilities.sciencelab', image: '/placeholders/sciencelab.svg' },
     { icon: Laptop, key: 'facilities.computerlab', image: '/placeholders/computerlab.svg' },
     { icon: Gamepad2, key: 'facilities.playground', image: '/Highlights/Playground.jpeg' },
-    { icon: Bus, key: 'facilities.transport', image: '/placeholders/transport.svg' },
-    { icon: Users, key: 'facilities.smartclassrooms', image: '/placeholders/smartclassrooms.svg' },
+    { icon: Bus, key: 'facilities.transport', image: '/Highlights/School Transport.png' },
+    { icon: Users, key: 'facilities.smartclassrooms', image: '/Highlights/Classroom moments.jpeg' },
   ];
 
   const featureKeys = [

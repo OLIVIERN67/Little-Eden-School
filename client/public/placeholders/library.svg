@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#e8eef5"/>
-  <rect x="32" y="32" width="1216" height="656" fill="none" stroke="#c3d0e0" stroke-width="3" stroke-dasharray="12 8"/>
-  <g transform="translate(640 270)">
-    <rect x="-60" y="-70" width="120" height="140" rx="6" fill="#b0c4de"/>
-    <rect x="48" y="-78" width="26" height="156" rx="6" fill="#9fb6d2"/>
-    <rect x="-48" y="-52" width="96" height="10" rx="3" fill="#ffffff" opacity="0.8"/>
-    <rect x="-48" y="-34" width="96" height="10" rx="3" fill="#ffffff" opacity="0.8"/>
-    <rect x="-48" y="-16" width="96" height="10" rx="3" fill="#ffffff" opacity="0.8"/>
+  <rect width="1280" height="720" fill="#f1f5f9"/>
+  <rect x="16" y="16" width="1248" height="688" rx="12" fill="none" stroke="#dbe3ec" stroke-width="2"/>
+  <g stroke="#93a8bf" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M640 265 C 622 246 596 243 578 251 L 578 363 C 596 355 622 358 640 372 C 658 358 684 355 702 363 L 702 251 C 684 243 658 246 640 265 Z"/>
+    <line x1="640" y1="268" x2="640" y2="369"/>
   </g>
-  <text x="640" y="470" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" fill="#5b769b" text-anchor="middle">Library</text>
-  <text x="640" y="520" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#8ba3c0" text-anchor="middle">Facility photo coming soon</text>
 </svg>
