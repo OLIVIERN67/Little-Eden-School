@@ -6,9 +6,9 @@ export default function FacilitiesSection() {
   const t = useT();
 
   const facilityKeys = [
-    { icon: BookOpen, key: 'facilities.library', image: '/placeholders/library.svg' },
-    { icon: Microscope, key: 'facilities.sciencelab', image: '/placeholders/sciencelab.svg' },
-    { icon: Laptop, key: 'facilities.computerlab', image: '/placeholders/computerlab.svg' },
+    { icon: BookOpen, key: 'facilities.library', image: '/Highlights/library.jpg' },
+    { icon: Microscope, key: 'facilities.sciencelab', image: '/Highlights/sciencelab.jpg' },
+    { icon: Laptop, key: 'facilities.computerlab', image: '/Highlights/computerlab.jpg' },
     { icon: Gamepad2, key: 'facilities.playground', image: '/Highlights/Playground.jpeg' },
     { icon: Bus, key: 'facilities.transport', image: '/Highlights/School Transport.png' },
     { icon: Users, key: 'facilities.smartclassrooms', image: '/Highlights/Classroom moments.jpeg' },
@@ -49,15 +49,17 @@ export default function FacilitiesSection() {
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
+                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent p-3 md:p-4 pb-8">
+                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-white drop-shadow">
+                        {t(`${facility.key}.title`)}
+                      </h3>
+                    </div>
                   </div>
                 )}
                 <div className="p-5 md:p-6">
                   <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#0056D2] to-[#0040A0] rounded-lg mb-3 md:mb-4 group-hover:scale-110 transition-transform">
                     <Icon className="text-white" size={24} />
                   </div>
-                  <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">
-                    {t(`${facility.key}.title`)}
-                  </h3>
                   <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                     {t(`${facility.key}.description`)}
                   </p>
